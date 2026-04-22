@@ -7,6 +7,10 @@
 // Output: false
 public class Kata {
     public static boolean solution(String str, String ending) {
-        return str.substring(str.length() - ending.length()) == ending;
+      if (str.length() < ending.length()) {
+        return false;
+      } else {      
+        return str.substring(str.length() - ending.length()).equals(ending);
+      }
     }
 }
